@@ -1,0 +1,52 @@
+Introduction 
+
+This page contains software and instructions for generalized time
+warping (GTW) [1]. In addition, we provide implementations of the
+dynamic time warping (DTW) [2], derivative dynamic time warping (DDTW)
+[3], iterative motion warping (IMW) [4] as baselines. in order to
+align more than two sequences, we extended DTW, DDTW and IMW to pDTW,
+pDDTW and pIMW resepctively by adopting the framework of Procrustes
+analysis [5]. Most of the functions have been written and documented
+in Matlab format. In order to achieve efficiency, we provided C++
+implementations for some functions.
+
+[1] F. Zhou and F. De la Torre, "Generalized Time Warping for
+Multi-modal Alignment of Human Motion," in CVPR, 2012.
+
+[2] L. Rabiner and B. Juang, "Fundamentals of speech recognition,"
+Prentice Hall, 1993.
+
+[3] E. J. Keogh and M. J. Pazzani, "Derivative Dynamic Time Warping,"
+in SDM, 2001.
+
+[4] E. Hsu and K. Pulli and J. Popovic, "Style Translation for Human
+Motion," ACM Trans. Graph., vol. 24, pp. 1082-1089, 2005.
+
+[5] I. L. Dryden and K. V. Mardia, "Statistical shape analysis",
+Wiley, 1998.
+
+Installation
+    1. unzip gtw.zip to your folder;
+    2. Run make.m to compile all C++ files;
+    3. Run addPath.m to add sub-directories into the path of Matlab.
+    4. Run demoToy.m
+
+Instructions
+The package of gtw.zip contains following files:
+    ./src: This folder contains the main implmentation of GTW and other baseline methods.
+    ./lib: This folder contains some necessary library functions.
+    ./make.m: Matlab makefile for C++ code.
+    ./addPath.m: Adds the sub-directories into the path of Matlab.
+    ./demoToy.m: Time alignment of three synthetic sequences by GTW and other baseline method. Same function used for replicating the first experiment in the paper [1].
+
+Copyright
+    This software is free for use in research projects. If you
+    publish results obtained using this software, please use this
+    citation.
+@inproceedings{ZhouD12,
+   author	= {Feng Zhou and Fernando {De la Torre}},
+   title 	= {Generalized Time Warping for Alignment of Human Motion},
+   booktitle	= {CVPR},
+   year 	= {2012},
+}
+If you have any question, please feel free to contact Feng Zhou (zhfe99@gmail.com).
